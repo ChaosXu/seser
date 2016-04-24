@@ -1,1 +1,3 @@
-﻿<Properties StartupItem="seser/seser.csproj" />
+﻿<Properties StartupItem="seser/seser.csproj" RefactoringSettings.EnableRefactorings="True">
+  <MonoDevelop.Ide.ItemProperties.seser AndroidDesignerPreferredDevice="Nexus 4" />
+</Properties>

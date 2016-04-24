@@ -1,29 +1,32 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using Chaosxu.Seser.Servcie;
 
 namespace seser
 {
 	[Activity (Label = "seser", MainLauncher = true, Icon = "@mipmap/icon")]
 	public class MainActivity : Activity
 	{
-		int count = 1;
-
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);
 
-			// Set our view from the "main" layout resource
+
 			SetContentView (Resource.Layout.Main);
 
-			// Get our button from the layout resource,
-			// and attach an event to it
-			Button button = FindViewById<Button> (Resource.Id.myButton);
-			
-			button.Click += delegate {
-				button.Text = string.Format ("{0} clicks!", count++);
+			var btnLogin = FindViewById<Button> (Resource.Id.btnLogin);
+			btnLogin.Click += async (object sender, System.EventArgs e) => {
+				var editUser = FindViewById<EditText> (Resource.Id.editUser);
+				var editPwd = FindViewById<EditText> (Resource.Id.editPwd);
+				string session =  await ServiceConfig.Instance.Session.Login (editUser.Text, editPwd.Text);
+				var dialog = new AlertDialog.Builder(this);
+				dialog.SetMessage(session);
+				dialog.Show();
 			};
+				
 		}
+							
 	}
 }
 
