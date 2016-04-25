@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 
 namespace Chaosxu.Seser.Servcie
 {
@@ -6,14 +7,23 @@ namespace Chaosxu.Seser.Servcie
 	{
 		public static ServiceConfig Instance = new ServiceConfig();
 
-		private SessionService session  = new SessionService();
+		private CookieContainer cookieContainer = new CookieContainer();
+		private SessionService sessionService  ;
+
+		private HomeworkService homeworkService;
 
 		private ServiceConfig ()
 		{
+			sessionService = new SessionService (cookieContainer);
+			homeworkService = new HomeworkService (cookieContainer);
 		}
 			
 		public SessionService Session {
-			get{ return session;}
+			get{ return sessionService;}
+		}
+
+		public HomeworkService HomworkService {
+			get{ return homeworkService; }
 		}
 	}
 }
