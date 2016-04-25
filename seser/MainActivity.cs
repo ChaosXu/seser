@@ -60,7 +60,11 @@ namespace seser
 				}
 				dialog.SetMessage (message);
 				dialog.Show ();
-			}			
+			} catch(Exception ex){
+				var dialog = new AlertDialog.Builder (this);
+				dialog.SetMessage (ex.Message);
+				dialog.Show ();
+			}
 		}
 
 		void AutoLogin ()
