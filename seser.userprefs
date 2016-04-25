@@ -2,13 +2,10 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" PreferredExecutionTarget="Android.0521b4a2" />
   <MonoDevelop.Ide.Workbench ActiveDocument="seser/Properties/AndroidManifest.xml">
     <Files>
-      <File FileName="seser/Service/SessionService.cs" Line="1" Column="1" />
-      <File FileName="seser/MainActivity.cs" Line="1" Column="1" />
-      <File FileName="seser/DatePickerFragment.cs" Line="1" Column="1" />
+      <File FileName="seser/MainActivity.cs" Line="55" Column="21" />
       <File FileName="seser/HomeworkActivity.cs" Line="19" Column="24" />
-      <File FileName="seser/Service/HomeworkService.cs" Line="1" Column="1" />
-      <File FileName="seser/Resources/values/Strings.xml" Line="5" Column="1" />
-      <File FileName="seser/Properties/AndroidManifest.xml" Line="1" Column="1" />
+      <File FileName="seser/Service/SessionService.cs" Line="16" Column="4" />
+      <File FileName="seser/Properties/AndroidManifest.xml" Line="5" Column="65" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
