@@ -49,7 +49,16 @@ namespace seser
 				StartActivity (intent);
 			} catch (WebException ex) {
 				var dialog = new AlertDialog.Builder (this);
-				dialog.SetMessage (ex.Message);
+				var message = ex.Message;
+				var response = ex.Response;
+				var length = (int)response.ContentLength;
+				if (length > 0) {
+					var stream = response.GetResponseStream ();
+					var buf = new byte[length];
+					stream.Read (buf, 0, length);
+					message = message + "\r\n" + Encoding.UTF8.GetString (buf);
+				}
+				dialog.SetMessage (message);
 				dialog.Show ();
 			}			
 		}
@@ -74,7 +83,7 @@ namespace seser
 					editPwd.Text = css [1];
 					chkAutoLogin.Checked = Boolean.Parse (css [2]);
 				}					
-			} catch (Java.IO.FileNotFoundException ex) {
+			} catch (Java.IO.FileNotFoundException) {
 				//ignore	
 			}
 		}

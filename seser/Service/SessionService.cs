@@ -17,12 +17,15 @@ namespace Chaosxu.Seser.Servcie
 
 		public async Task<string> Login (string user, string pwd)
 		{
+			ServicePointManager.Expect100Continue = false;
+
 			Encoding encoding = Encoding.UTF8;
 			byte[] payload = encoding.GetBytes (String.Format ("username={0}&password={1}&is_parent=on", user, pwd));
 
 			HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create (URL_LOGIN);
 			request.CookieContainer = CookieContainer;
 			request.Method = "POST";
+			request.Referer = URL_LOGIN;
 			request.ContentType = "application/x-www-form-urlencoded";
 			request.ContentLength = payload.Length;
 			var stream = request.GetRequestStream ();
