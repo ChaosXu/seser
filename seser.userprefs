@@ -1,3 +1,18 @@
 ﻿<Properties StartupItem="seser/seser.csproj" RefactoringSettings.EnableRefactorings="True">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.0521b4a2" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="seser/HomeworkActivity.cs">
+    <Files>
+      <File FileName="seser/Service/SessionService.cs" Line="37" Column="3" />
+      <File FileName="seser/MainActivity.cs" Line="10" Column="25" />
+      <File FileName="seser/DatePickerFragment.cs" Line="1" Column="1" />
+      <File FileName="seser/HomeworkActivity.cs" Line="19" Column="24" />
+      <File FileName="seser/Service/HomeworkService.cs" Line="1" Column="1" />
+      <File FileName="seser/Resources/values/Strings.xml" Line="2" Column="12" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.seser AndroidDesignerPreferredDevice="Nexus 4" />
 </Properties>

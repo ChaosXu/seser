@@ -16,7 +16,7 @@ using Android.Webkit;
 
 namespace seser
 {
-	[Activity (Label = "HomeworkActivity")]			
+	[Activity (Label = "作业")]			
 	public class HomeworkActivity : Activity
 	{
 		protected override void OnCreate (Bundle savedInstanceState)

@@ -12,7 +12,8 @@ public final class R {
     }
     public static final class id {
         public static final int btnDate=0x7f050000;
-        public static final int btnLogin=0x7f050006;
+        public static final int btnLogin=0x7f050007;
+        public static final int chkAutoLogin=0x7f050006;
         public static final int editPwd=0x7f050005;
         public static final int editUser=0x7f050003;
         public static final int textView1=0x7f050002;
@@ -27,7 +28,6 @@ public final class R {
         public static final int icon=0x7f020000;
     }
     public static final class string {
-        public static final int app_name=0x7f040001;
-        public static final int hello=0x7f040000;
+        public static final int app_name=0x7f040000;
     }
 }
